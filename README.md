@@ -60,5 +60,21 @@
 ## Create Multikey Index
 ## Syntax
 	db.coll.createIndex( { <field>: < 1 or -1 > } )
-##### MongoDB automatically creates a multikey index if any indexed field is an array; you do not need to explicitly specify the multikey type
+##### MongoDB automatically creates a multikey index if any indexed field is an array; you do not need to explicitly specify the multikey type.
+##### You cannot create a compound multikey index if more than one to-be-indexed field of a document is an array. For example, consider a collection that contains the following document:
+	{ _id: 1, a: [ 1, 2 ], b: [ 1, 2 ], category: "AB - both arrays" }
+##### You cannot create a compound multikey index { a: 1, b: 1 } on the collection since both the a and b fields are arrays.
+
+# Text Indexing
+#####  Support text search queries on string content.(fields with string value or array of strings)
+## Syntax
+	db.COLLECTION_NAME.createIndex( { comments: "text" } )
+### Example
+	db.student_data.createIndex(
+  	 {
+    	 subject: "text",
+    	 comments: "text"
+   	 }
+	 )
+
 
