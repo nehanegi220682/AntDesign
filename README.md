@@ -53,5 +53,12 @@
 	
 ### Example
 	db.products.createIndex( { "item": 1, "stock": 1 } )
-##### The order of the fields listed in a compound index is important
+##### The order of the fields listed in a compound index is important.The index sorts first by userid and then, within each userid value, sorts by score.
+
+# MultiKey Index
+##### To index a field that holds an array value, MongoDB creates an index key for each element in the array.
+## Create Multikey Index
+## Syntax
+	db.coll.createIndex( { <field>: < 1 or -1 > } )
+##### MongoDB automatically creates a multikey index if any indexed field is an array; you do not need to explicitly specify the multikey type
 
