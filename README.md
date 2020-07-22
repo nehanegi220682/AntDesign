@@ -34,7 +34,6 @@
 ### =>Single Field
 ### =>Compound Index
 ### =>Multikey Index
-### =>Geospatial Index
 ### =>Text Indexes
 ### =>Hashed Indexes
 
@@ -76,5 +75,13 @@
     	 comments: "text"
    	 }
 	 )
+	 
+# Hashed Indexes
+##### Hashed indexes maintain entries with hashes of the values of the indexed field.
+## Syntax
+	db.collection.createIndex( { _id: "hashed" } )
+
+
+
 
 
