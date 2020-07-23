@@ -57,6 +57,25 @@
           </Menu.ItemGroup>
         </SubMenu>
 	</Menu>
+	
+## Pagination
+#### Split a long list into several pages
+
+### Basic Pagination
+	import { Pagination } from 'antd';
+	ReactDOM.render(<Pagination defaultCurrent={1} total={50} />, mountNode);
+### Change size of pagination
+	<Pagination
+     	 showSizeChanger
+     	 onShowSizeChange={onShowSizeChange}
+     	 defaultCurrent={3}
+     	 total={500}
+    	/>
+	
+### Add a quick jumper to certain page
+	<Pagination showQuickJumper defaultCurrent={2} total={500} onChange={onChange} />
+	
+
          
 	
 
