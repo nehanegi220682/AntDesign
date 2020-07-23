@@ -57,5 +57,51 @@
           </Menu.ItemGroup>
         </SubMenu>
 	</Menu>
+	
+## Pagination
+#### Split a long list into several pages
+
+### Basic Pagination
+	import { Pagination } from 'antd';
+	ReactDOM.render(<Pagination defaultCurrent={1} total={50} />, mountNode);
+### Change size of pagination
+	<Pagination
+     	 showSizeChanger
+     	 onShowSizeChange={onShowSizeChange}
+     	 defaultCurrent={3}
+     	 total={500}
+    	/>
+	
+### Add a quick jumper to certain page
+	<Pagination showQuickJumper defaultCurrent={2} total={500} onChange={onChange} />
+
+## Basic Dropdown
+	import { Menu, Dropdown } from 'antd';
+
+	const menu = (
+ 	 <Menu>
+    	<Menu.Item>
+         <a target="_blank" rel="noopener noreferrer" href="http://www.abc.com/">
+         1st menu item
+        </a>
+   	 </Menu.Item>
+   	 <Menu.Item>
+    	  <a target="_blank" rel="noopener noreferrer" href="http://www.xyz.com/">
+        2nd menu item
+        </a>
+      	</Menu.Item>
+    	
+	);
+	
+	<Dropdown overlay={menu}>
+	<a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+	Hover me <DownOutlined />
+	</a>
+	</Dropdown>
+
+	
+
          
 	
+
+
