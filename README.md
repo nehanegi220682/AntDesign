@@ -100,6 +100,48 @@
 	</Dropdown>
 
 #
+
+## Alert
+#### Shows alert messages to users
+	import { Alert } from 'antd';
+
+	ReactDOM.render(
+ 	 <>
+  	  <Alert message="Success Text" type="success" />
+   	 <Alert message="Info Text" type="info" />
+   	 <Alert message="Warning Text" type="warning" />
+   	 <Alert message="Error Text" type="error" />
+  	</>,
+ 	 mountNode,
+	);
+	
+## Modals
+#### used to interact with users without going to next page
+	import { Modal, Button } from 'antd';
+
+
+ 	 render() {
+ 	   return (
+  	    <>
+        <Button type="primary" onClick={this.showModal}> //visible true
+          Open Modal
+        </Button>
+        <Modal
+          title="Basic Modal"
+          visible={this.state.visible}
+          onOk={this.handleOk} //visible false
+          onCancel={this.handleCancel} //sets visible flase
+        >
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+        </Modal>
+    	  </>
+   	 );
+ 	 }
+	}
+	
+#
 # Grids
 ###### Based on 12 Grids System, we divided the design area into 24 sections, for example for a layout like 3 equal divisions of the page we use
 	<Col span={8} />.
