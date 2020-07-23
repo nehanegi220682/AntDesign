@@ -80,8 +80,40 @@
 ##### Hashed indexes maintain entries with hashes of the values of the indexed field.
 ## Syntax
 	db.collection.createIndex( { _id: "hashed" } )
+	
+# queries
+# count
+	db.getCollection('Users').aggregate([
+	{$match:{age:{$gte:25}}},
+	{$count:"Age_Count"} 
+	])
 
 
+# ANT DESIGN
 
+## Components
+
+## Button
+	Types: Primary, dashed, text, link
+	Size: Large, Default, Small
+### Import
+	import { Button } from 'antd';
+### Usage
+	<Button type="primary" size="large">
+          Primary
+        </Button>
+	
+## Button with download icon
+	 <Button type="primary" shape="circle" icon={<DownloadOutlined />}  />
+         <Button type="primary" shape="round" icon={<DownloadOutlined />}/>
+         <Button type="primary" shape="round" icon={<DownloadOutlined />}/>
+	 
+#### To make a button background tranparent
+	 <Button type="primary" ghost>
+    	  Primary
+    	 </Button>
+#### Other propertied on button : disabled, loading, block etc
+         
+	
 
 
