@@ -120,7 +120,7 @@
 ###### You can use a array to set vertical spacing, [horizontal, vertical] [16, { xs: 8, sm: 16, md: 24, lg: 32 }].
 ###### Example
  
-## Horizontal -Create horizontal spacing between boxes.
+## Horizontal->Create horizontal spacing between boxes.
     <Row gutter={16}>
       <Col className="gutter-row" span={6}>
         <div style={style}>col-6</div>
@@ -129,7 +129,7 @@
         <div style={style}>col-6</div>
       </Col>
      </Row>
-## Responsive-Creates spacing between boxes as per screen sizes.
+## Responsive->Creates spacing between boxes as per screen sizes.
     <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
       <Col className="gutter-row" span={6}>
         <div style={style}>col-6</div>
@@ -138,7 +138,7 @@
         <div style={style}>col-6</div>
       </Col>
     </Row>
-## Vertical.Create [{Horizontal,Vertical Spacing}] between grids
+## Vertical->Create[{Horizontal,Vertical Spacing}] between grids
     <Row gutter={[16, 24]}>
       <Col className="gutter-row" span={6}>
         <div style={style}>col-6</div>
