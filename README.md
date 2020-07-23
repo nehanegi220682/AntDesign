@@ -180,6 +180,15 @@
 # Responsive
 ###### Referring to the Bootstrap responsive design,here preset six dimensions: xs sm md lg xl.We can place our grid blocks as requires by our screen sizes.
 
+
+# Layout 
+###### Ant design provides layout models which ca be used according to users needs. We can nest layout inside a layout, and the header, content, footer should be placed inside of layout.It provides responsive breakpoint and fixed header and sidebar layouts.
+ 	<Layout>
+      <Header>Header</Header>
+      <Content>Content</Content>
+      <Footer>Footer</Footer>
+    </Layout>
+
 	
 
          
