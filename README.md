@@ -1,13 +1,4 @@
 
-	
-# queries
-# count
-	db.getCollection('Users').aggregate([
-	{$match:{age:{$gte:25}}},
-	{$count:"Age_Count"} 
-	])
-
-
 # ANT DESIGN
 
 ## Components
