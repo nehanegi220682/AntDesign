@@ -175,7 +175,10 @@
 # Flex Properties on Grids.
 ## Using Flex Box On the Parent Elements. Ant design supports all flex properties.
 #### Child elements depending on the value of the start,center, end,space-between, space-around, which are defined in its parent node.
-#### We can use Align Properties too Vertically. Example-> Align Top, Align Middle, Align Bottom,
+#### We can use Align Properties too Vertically. Example-> Align Top, Align Middle, Align Bottom.
+
+# Responsive
+###### Referring to the Bootstrap responsive design,here preset six dimensions: xs sm md lg xl.We can place our grid blocks as requires by our screen sizes.
 
 	
 
