@@ -103,7 +103,8 @@
 # Grids
 ###### Based on 12 Grids System, we divided the design area into 24 sections, for example for a layout like 3 equal divisions of the page we use
 	<Col span={8} />.
-###### Content should be placed inside <Col>Normal Content</Col> and Columns should be placed inside <Row><Col span={8}/></Row>
+###### Content should be placed inside <Col>Normal Content</Col> and Columns should be placed inside 
+	<Row><Col span={8}/></Row>
 ###### Example
      <Row>
       <Col span={6}>content</Col>
