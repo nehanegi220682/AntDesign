@@ -99,6 +99,53 @@
 	</a>
 	</Dropdown>
 
+#
+# Grids
+###### Based on 12 Grids System, we divided the design area into 24 sections, for example for a layout like 3 equal divisions of the page we use <Col span={8} />.
+###### Content should be placed inside <Col>Normal Content</Col> and Columns should be placed inside <Row><Col span={8}/></Row>
+###### Example
+     <Row>
+      <Col span={6}>content</Col>
+      <Col span={6}>content</Col>
+      <Col span={6}>content</Col>
+      <Col span={6}>content</Col>
+    </Row>
+###### This will divide the page into 4 sections each 6-6 boxes as we have totla of 24 boxes on a page in ant.
+
+### Grid Gutter
+###### You can use the gutter property of Row as grid spacing, we recommend set it to (16 + 8n) px. (n stands for natural number.)
+###### You can set it to a object like { xs: 8, sm: 16, md: 24, lg: 32 } for responsive design.
+###### You can use a array to set vertical spacing, [horizontal, vertical] [16, { xs: 8, sm: 16, md: 24, lg: 32 }].
+###### Example
+ 
+## Horizontal -Create horizontal spacing between boxes.
+    <Row gutter={16}>
+      <Col className="gutter-row" span={6}>
+        <div style={style}>col-6</div>
+      </Col>
+      <Col className="gutter-row" span={6}>
+        <div style={style}>col-6</div>
+      </Col>
+     </Row>
+## Responsive-Creates spacing between boxes as per screen sizes.
+    <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+      <Col className="gutter-row" span={6}>
+        <div style={style}>col-6</div>
+      </Col>
+      <Col className="gutter-row" span={6}>
+        <div style={style}>col-6</div>
+      </Col>
+    </Row>
+## Vertical.Create [{Horizontal,Vertical Spacing}] between grids
+    <Row gutter={[16, 24]}>
+      <Col className="gutter-row" span={6}>
+        <div style={style}>col-6</div>
+      </Col>
+      <Col className="gutter-row" span={6}>
+        <div style={style}>col-6</div>
+      </Col>
+    </Row>
+
 	
 
          
