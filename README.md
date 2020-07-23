@@ -147,6 +147,30 @@
         <div style={style}>col-6</div>
       </Col>
     </Row>
+    
+
+## Column Offset-> Effective to create spaces between grid blocks.
+###### Offset can set the column to the right side. For example, using offset = {4} can set the element shifted to the right four columns width.
+	<Row>
+      <Col span={8}>col-8</Col>
+      <Col span={8} offset={8}>
+        Comntent
+      </Col>
+    </Row>
+    
+###### Explanation->It creates a Block of size 8 and and another box of size 8 but at a space of 8 boxes to the right from the left block.
+## Grid sort
+###### By using push and pull class you can easily change column order.
+	<Row>
+    <Col span={18} push={6}>
+      col-18 col-push-6
+    </Col>
+    <Col span={6} pull={18}>
+      col-6 col-pull-18
+    </Col>
+   </Row>,
+
+###### Explanation->First col pushes the 6 size block towards its position and second col pulls the 18 size block towards its position.    
 
 	
 
