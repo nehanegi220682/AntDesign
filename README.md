@@ -375,7 +375,7 @@
 	  },
 	];
 
-<Table columns={columns} dataSource={data} />
+	<Table columns={columns} dataSource={data} />
 
 # Dropdown
 	import { Menu, Dropdown } from 'antd';
