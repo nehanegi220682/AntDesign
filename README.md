@@ -141,6 +141,108 @@
  	 }
 	}
 	
+## DRAWERS
+##### A Drawer is a panel that is typically overlaid on top of a page and slides in from the side.user can interact with the Drawer without leaving the current page.
+
+### Example
+	import React, { useState } from 'react';
+	import { Drawer, Button } from 'antd';
+	
+	const App = () => {
+	const [visible, setVisible] = useState(false);
+	
+	const showDrawer = () => {
+	setVisible(true);
+	};
+
+	const onClose = () => {
+	setVisible(false);
+	};
+
+	return (
+	<>
+	<Button type="primary" onClick={showDrawer}>
+	Open
+	</Button>
+	<Drawer
+	title="Basic Drawer"
+	placement="right"
+	closable={false}
+	onClose={onClose}
+	visible={visible}
+	>
+	<p>Some contents...</p>
+	<p>Some contents...</p>
+	<p>Some contents...</p>
+	</Drawer>
+	</>
+	);
+	};
+
+## Upload
+##### upload files by either clicking and selecting or dragging files
+
+### Example (upload file by clicking)
+	import { Upload, message, Button } from 'antd';
+	import { UploadOutlined } from '@ant-design/icons';
+
+	const props = {
+	  name: 'file',
+	  action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+	  headers: {
+	    authorization: 'authorization-text',
+	  },
+	  onChange(info) {
+	    if (info.file.status !== 'uploading') {
+	      console.log(info.file, info.fileList);
+	    }
+	    if (info.file.status === 'done') {
+	      message.success(`${info.file.name} file uploaded successfully`);
+	    } else if (info.file.status === 'error') {
+	      message.error(`${info.file.name} file upload failed.`);
+	    }
+	  },
+	};
+
+	ReactDOM.render(
+	  <Upload {...props}>
+	    <Button>
+	      <UploadOutlined /> Click to Upload
+	    </Button>
+	  </Upload>,
+	  mountNode,
+	);
+
+## Switch
+##### Represent the switching between two states or on-off state.
+
+### Example
+	import { Switch } from 'antd';
+
+	function onChange(checked) {
+	  console.log(`switch to ${checked}`);
+	}
+
+	ReactDOM.render(<Switch defaultChecked onChange={onChange} />, mountNode);
+
+## Steps
+##### Steps is a navigation bar that guides users through the steps of a task. use it when task is long and complicated and has subtasks
+
+### Example
+	import { Steps } from 'antd';
+
+	const { Step } = Steps;
+
+	ReactDOM.render(
+	  <Steps current={1}>
+	    <Step title="Finished" description="This is a description." />
+	    <Step title="In Progress" subTitle="Left 00:00:08" description="This is a description." />
+	    <Step title="Waiting" description="This is a description." />
+	  </Steps>,
+	  mountNode,
+	);
+
+
 #
 # Grids
 ###### Based on 12 Grids System, we divided the design area into 24 sections, for example for a layout like 3 equal divisions of the page we use
