@@ -472,6 +472,12 @@
 
 	ReactDOM.render(<Demo />, mountNode);
  ###### TreeSelect is similar to Select, but the values are provided in a tree like structure.
- 
-	    
+# AutoComplete
+###### Autocomplete function of input field.
 
+We use it When there is a need for autocomplete functionality.
+#
+# Radio Button
+import { Radio } from 'antd';
+
+ReactDOM.render(<Radio>Radio</Radio>, mountNode);
